@@ -29,6 +29,14 @@ FLOOR      = (0, 255, 0, 255)
 OUTLINE_1  = (0, 0, 0, 255)
 OUTLINE_2  = (255, 255, 255, 255)
 
+assert screen_size[0] > 0
+assert screen_size[1] > 0
+assert size[0] >= 0
+assert size[1] >= 0
+assert 0 <= density <= 1
+
+assert OUTLINE_1 != OUTLINE_2
+
 # wall directions to tile id
 tile_ids = {
 	frozenset({UP, DN, LF, RG}): 0,
