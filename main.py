@@ -13,7 +13,7 @@ screen_size = (1366, 768)
 background = (77, 77, 77, 255)
 # width, height of backrooms in tiles
 size = (40, 40)
-# percentage of tile being without walls
+# chance of tile being without walls
 shatter_percentage = 0.5
 
 # tile parameters
