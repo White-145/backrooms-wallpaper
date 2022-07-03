@@ -9,17 +9,18 @@ from maze import Maze, N as UP, S as DN, W as LF, E as RG
 filename = "wallpaper"
 # your screen size (width, height)
 screen_size = (1366, 768)
-# background color
-background = (77, 77, 77, 255)
 # width, height of backrooms in tiles
 size = (40, 40)
-# chance of tile being without walls
-shatter_percentage = 0.5
+# wall density
+density = 0.5
 
-# tile parameters
+# pro parameters
 tile_size = 22
 tile_size_outlineless = 20
 tile_grid = (4, 4)
+
+# background color
+background = (77, 77, 77, 255)
 
 FRONT_WALL = (255, 0, 0, 255)
 BACK_WALL  = (0, 0, 255, 255)
@@ -96,7 +97,7 @@ for x, y in grid(*size):
 	else:
 		img.paste(t := tiles[tile_ids[frozenset({})]], pos(x, y), t)  # floor
 
-	if random() > shatter_percentage:
+	if random() < density:
 		cell = generation[x, y]
 		img.paste(t := tiles[tile_ids[frozenset(cell.walls)]], pos(x, y), t)
 
