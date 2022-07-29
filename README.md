@@ -18,7 +18,7 @@ Normal (40x40)
 
 ### How to use
 
-* Download all files
+* Clone repository
 * Change the parameters for yourself (in main.py)
 
 ![image](https://user-images.githubusercontent.com/74352995/177056532-06e184d9-63e7-47fa-b7dc-8eec2e20f1f7.png)
